@@ -2,9 +2,9 @@ var Player1 = 'x';
 var Player2 = 'o';
 
 var board = [
-    ['o', 'x', ''],
+    ['x', 'x', 'x'],
     ['', 'x', ''],
-    ['', 'o', '']
+    ['', 'o', 'x']
 ];
 
 console.log(checkWinner(Player1, board));
@@ -39,7 +39,7 @@ function checkWinner(player, board) {
         isWin = true;
         for(var j = 0; j < 3; j++) {
             if(checkWin[winConditions[i][j]] == true) {
-                console.log("correct");
+                ;
             } else {
                 isWin = false;
             }
@@ -48,5 +48,5 @@ function checkWinner(player, board) {
             return true;
         }
     }
-
+    return false;
 }
