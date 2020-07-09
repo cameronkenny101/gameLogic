@@ -2,7 +2,9 @@
     @param TicTacToe board
     @return 0 for no winner, 1 for 'x' as winner, 2 for 'o' as winner and 3 for draw
 */
+
 function checkWinner(board) {
+    // Pre-determined win conditions of TicTacToe
     const winConditions = [
         [0, 1, 2],
         [3, 4, 5],
@@ -20,6 +22,7 @@ function checkWinner(board) {
     var location = 0;
     var count = 0;
 
+    // Stores location of x's and stores location of o's
     for(var i = 0; i < 3; i++) {
         for(var j = 0; j < 3; j++) {
             if(board[i][j] == 'x') {
@@ -37,6 +40,7 @@ function checkWinner(board) {
     var isWinX = true;
     var isWinO = true;
 
+    // Runs through win conditions
     for(var i = 0; i < 8; i++) {
         isWinX = true;
         isWinO = true;
@@ -54,9 +58,10 @@ function checkWinner(board) {
             return 2;
         }
     }
-
+    // If no moves are left return a draw
     if(count == 9)
         return 3;
+    // else return no winner
     else
         return 0;
     

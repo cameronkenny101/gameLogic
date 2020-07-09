@@ -7,7 +7,35 @@ test('Checks if player has won game', () => {
         ['o', 'x', 'x']
     ];
 
-    var Player1 = 'x';
+    expect(checkWinner(board) == 1);
+});
 
-    expect(checkWinner(Player1, board) == true);
+test('Checks if player has won game', () => {
+    var board = [
+        ['x', 'o', 'x'],
+        ['o', 'x', 'o'],
+        ['o', 'x', 'o']
+    ];
+
+    expect(checkWinner(board) == 3);
+});
+
+test('Checks if player has won game', () => {
+    var board = [
+        ['x', 'o', 'x'],
+        ['o', 'x', 'x'],
+        ['o', 'o', 'o']
+    ];
+
+    expect(checkWinner(board) == 2);
+});
+
+test('Checks if player has won game', () => {
+    var board = [
+        ['x', 'o', 'x'],
+        ['o', 'x', 'x'],
+        ['o', '', 'o']
+    ];
+
+    expect(checkWinner(board) == 0);
 });
