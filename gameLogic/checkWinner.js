@@ -1,14 +1,3 @@
-var Player1 = 'x';
-var Player2 = 'o';
-
-var board = [
-    ['x', 'x', 'x'],
-    ['', 'x', ''],
-    ['', 'o', 'x']
-];
-
-console.log(checkWinner(Player1, board));
-
 function checkWinner(player, board) {
     const winConditions = [
         [0, 1, 2],
@@ -50,3 +39,5 @@ function checkWinner(player, board) {
     }
     return false;
 }
+
+module.exports = checkWinner;
