@@ -40,7 +40,7 @@ function checkWinner(board) {
     var isWinX = true;
     var isWinO = true;
 
-    // Runs through win conditions
+    // Runs through the win conditions
     for(var i = 0; i < 8; i++) {
         isWinX = true;
         isWinO = true;
