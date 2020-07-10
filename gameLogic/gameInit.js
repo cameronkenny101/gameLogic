@@ -4,7 +4,11 @@
  */
 
 var size_n = 3,
-	boxes = [];
+	nullsp = "&nbsp;",
+	turn = "X",
+	boxes = [],
+	moves,
+	score;
 
 
 function init() {
@@ -43,5 +47,23 @@ function init() {
 				identifier += identifier;
 			}
 		}
+		document.getElementById("tictactoe").appendChild(board);
+
+		newGame();
 		}
+
+		/* This function sets up the board for a new game which is called post init */
+	function newGame() {
+		score = {
+			"X": 0,
+			"0": 0
+		};
+		moves = 0;
+		turn = "X"
+		boxes.foreach(function(square) {
+			square.innerHTML = nullsp;
+		});
+	}
+
+
 		module.exports = gameInit;
